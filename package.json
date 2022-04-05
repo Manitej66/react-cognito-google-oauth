@@ -10,9 +10,12 @@
     "remove": "sst remove"
   },
   "eslintConfig": {
-    "extends": ["serverless-stack"]
+    "extends": [
+      "serverless-stack"
+    ]
   },
   "dependencies": {
+    "@aws-cdk/aws-apigatewayv2-authorizers-alpha": "^2.19.0-alpha.0",
     "@serverless-stack/cli": "0.69.0",
     "@serverless-stack/resources": "0.69.0",
     "aws-cdk-lib": "2.15.0"

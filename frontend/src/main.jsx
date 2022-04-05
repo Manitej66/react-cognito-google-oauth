@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
@@ -22,6 +23,15 @@ Amplify.configure({
       redirectSignOut: "http://localhost:3000", // Make sure to use the exact URL
       responseType: "token", // or 'token', note that REFRESH token will only be generated when the responseType is code
     },
+  },
+  API: {
+    endpoints: [
+      {
+        name: "api",
+        endpoint: import.meta.env.VITE_APP_API_URL,
+        region: import.meta.env.VITE_APP_REGION,
+      },
+    ],
   },
 });
 
